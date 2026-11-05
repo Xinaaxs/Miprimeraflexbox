@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mi primer maqueta</title>
+    <title>CSS Fácil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
         .caja1 {
-            height: 100px;
+            min-height: 100px;
             background-color: #c594b7;
         }
 
@@ -57,32 +57,112 @@
             height: 300px;
             background-color: #94D0FF;
         }
+
+        .icono {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;      
+    object-fit: cover;       
+    border: 2px solid #fff;  
+}
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <nav
-                class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ca-flex flex-row justify-content-center">
-                caja</nav>
-            <a class="btn btn-outline-light" href="#" role="button">Estructura y Sintaxis</a>
-            <img src="">
-            <a class="btn btn-outline-light" href="#" role="button">Niveles de Especificad</a>
-            <a class="btn btn-outline-light" href="#" role="button">Pseudo Clases y Pseudo Elementos</a>
-            <a class="btn btn-outline-light" href="#" role="button">Box Model</a>
 
-            <header class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-12 col-xxl-12 caja2">caja</header>
-            <aside class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-4 col-xxl-4 caja3">caja</aside>
-            <section class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-4 col-xxl-4 caja4">caja</section>
-            <aside class="col-6 col-sm-6 col-md-10 col-lg-10 col-xl-4 col-xxl-4 caja5">caja</aside>
-            <section class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-8 col-xxl-8 caja6">caja</section>
-            <section class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja7">caja</section>
-            <section class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja8">caja</section>
-            <section class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja9">caja</section>
-            <footer class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3 caja10">caja</footer>
-        </div>
+          
+<nav
+    class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-start gap-4 p-3">
+
+    <div class="d-flex flex-column align-items-center gap-2">
+        <img class="icono" src="img/icono-estructura.png" alt="Icono estructura">
+        <a class="btn btn-outline-light" href="#" role="button">Estructura y Sintaxis</a>
     </div>
+
+    <div class="d-flex flex-column align-items-center gap-2">
+        <img class="icono" src="img/icono-especificidad.png" alt="Icono especificidad">
+        <a class="btn btn-outline-light" href="#" role="button">Niveles de Especificidad</a>
+    </div>
+
+    <div class="d-flex flex-column align-items-center gap-2">
+        <img class="icono" src="img/icono-pseudoclases.png" alt="Icono pseudo clases">
+        <a class="btn btn-outline-light" href="#" role="button">Pseudo Clases y Pseudo Elementos</a>
+    </div>
+
+    <div class="d-flex flex-column align-items-center gap-2">
+        <img class="icono" src="img/icono-boxmodel.png" alt="Icono box model">
+        <a class="btn btn-outline-light" href="#" role="button">Box Model</a>
+    </div>
+
+</nav>
+
+            
+            <header class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-12 col-xxl-12 caja2 p-0 position-relative">
+                <img class="w-100 h-100 object-fit-cover" src="img/banner-css.jpeg" alt="Banner CSS Fácil">
+                <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+
+                </div>
+            </header>
+
+           
+            <aside class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-4 col-xxl-4 caja3 text-white p-3">
+                <h4>¿Qué es CSS?</h4>
+                <p>CSS (Cascading Style Sheets) es el lenguaje que le da color, tamaño y forma al HTML.</p>
+            </aside>
+
+          
+            <section class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-4 col-xxl-4 caja4 p-0">
+                <img class="w-100 h-100 object-fit-cover" src="img/css-codigo.jpeg" alt="Código CSS">
+            </section>
+
+           
+            <aside class="col-6 col-sm-6 col-md-10 col-lg-10 col-xl-4 col-xxl-4 caja5 p-3">
+                <h4>Estructura y sintaxis</h4>
+                <p>Una regla CSS se compone de un selector y un bloque de declaraciones:</p>
+                <pre class="bg-white p-2 rounded"><code>selector {
+    propiedad: valor;
+}</code></pre>
+            </aside>
+
+          
+            <section class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-8 col-xxl-8 caja6 p-3">
+                <h4>Box Model</h4>
+                <p>Todo elemento es una caja formada por contenido, padding, borde y margen.</p>
+                <pre class="bg-white p-2 rounded"><code>.caja {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+}</code></pre>
+            </section>
+
+            
+            <section class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja7 p-3 ">
+                <img class="icono mb-2" src="img/icono-estructura.png" alt="Icono estructura">
+                <h5>Selectores</h5>
+                <p>Eligen a qué etiquetas se les aplica el estilo: <code>p</code>, <code>.clase</code>, <code>#id</code>.</p>
+            </section>
+
+            <section class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja8 p-3">
+                <img class="icono mb-2" src="img/icono-especificidad.png" alt="Icono especificidad">
+                <h5>Especificidad</h5>
+                <p>Define qué estilo gana: etiqueta &lt; clase &lt; id &lt; estilo en línea.</p>
+            </section>
+
+            <section class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 caja9 p-3">
+                <img class="icono mb-2" src="img/icono-pseudoclases.png" alt="Icono pseudo clases">
+                <h5>Pseudo clases</h5>
+                <p>Estilos según el estado: <code>a:hover</code>, <code>li:first-child</code>, <code>p::before</code>.</p>
+            </section>
+
+            <footer class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8 caja10 p-3">
+                <h5>CSS Fácil</h5>
+                <p>Programación web paso a paso: HTML, CSS y más.</p>
+            </footer>
+
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
