@@ -1,68 +1,43 @@
 
 <!doctype html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Especificidad</title>
+    <title>CSS Fácil - Especificidad</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
     <style>
 
-        body {
-            background-color: #F5EEFA;
-            color: #392653;
-            font-family: Arial, sans-serif;
-        }
+body {
+    background-color: #f1eff8;
+    color: #302b49;
+}
 
-        .caja1 {
-            min-height: 130px;
-            background-color: #492C70;
-        }
+/* MENÚ */
+.caja1 {
+    background-color: #302b49;
+}
 
-        .caja2 {
-            min-height: 300px;
-            background-color: #A78BDF;
-        }
+.icono {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
 
-        .caja3 {
-            min-height: 300px;
-            background-color: #E58BC5;
-        }
 
-        .caja4 {
-            min-height: 300px;
-            background-color: #B6A0EE;
-        }
+.btn-menu:hover {
+    background-color: #d5a2c1;
+    color: #302b49;
+}
 
-        .caja5 {
-            min-height: 300px;
-            background-color: #F5EEFA;
-        }
-
-        .caja6 {
-            min-height: 300px;
-            background-color: #FFC9A8;
-        }
-
-        .caja7 {
-            min-height: 300px;
-            background-color: #F49BB5;
-        }
-
-        .caja8 {
-            min-height: 300px;
-            background-color: #91C9F4;
-        }
-
-        .caja9 {
-            min-height: 300px;
-            background-color: #B9E5C1;
-        }
-
+/* BANNER */
+.banner {
+    height: 220px;
+    object-fit: cover;
+}
         .icono {
             width: 60px;
             height: 60px;
@@ -71,154 +46,437 @@
             border: 2px solid white;
         }
 
-        .menu-item {
+                .menu-item {
             flex: 0 1 210px;
             min-width: 0;
         }
+/* INTRODUCCIÓN */
+.caja-intro {
+    background-color: #ded7f1;
+}
 
-        .imagen-codigo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.caja-intro2 {
+    background-color: #e8b9d3;
+}
 
-        .btn-menu {
-            color: white;
-            border: 2px solid #D9C5F5;
-            border-radius: 0;
-            padding: 10px 15px;
-            background-color: transparent;
-            transition: 0.3s;
-        }
+/* NIVELES */
+.caja-nivel1 {
+    background-color: #f5dce9;
+}
 
-        .btn-menu:hover {
-            background-color: #D9C5F5;
-            color: #492C70;
-        }
+.caja-nivel2 {
+    background-color: #ded7f1;
+}
 
-        @media (max-width: 575.98px) {
+.caja-nivel3 {
+    background-color: #d5e8ed;
+}
 
-            .caja1 {
-                gap: 12px !important;
-            }
+.caja-nivel4 {
+    background-color: #f2e4c9;
+}
 
-            .menu-item {
-                flex: 1 1 calc(50% - 12px);
-            }
+.caja-nivel5 {
+    background-color: #e8dcef;
+}
 
-            .btn-menu {
-                width: 100%;
-                min-height: 48px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 8px;
-                font-size: 0.85rem;
-            }
-        }
+.caja-nivel1,
+.caja-nivel2,
+.caja-nivel3,
+.caja-nivel4,
+.caja-nivel5 {
+    border: none;
+    border-radius: 15px;
+}
 
-        @media (min-width: 576px) and (max-width: 1024px) {
+/* IMÁGENES */
+.imagen-nivel {
+    width: 130px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
 
-            .menu-item {
-                flex: 1 1 calc(50% - 16px);
-                max-width: 260px;
-            }
-        }
+.imagen-universal {
+    width: 160px;
+    max-width: 100%;
+}
 
-        @media (min-width: 768px) and (max-width: 1024px) {
+/* CÓDIGO */
+pre {
+    background-color: #302b49;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
 
-            .imagen-codigo {
-                display: none;
-            }
-        }
+code {
+    color: #ffffff;
+}
+
+/* SELECTOR UNIVERSAL */
+.caja-universal {
+    background-color: #d5e8ed;
+    border: none;
+    border-radius: 15px;
+}
+
+/* RESUMEN */
+.caja-resumen {
+    background-color: #e8b9d3;
+    border: none;
+}
+
+.caja-tabla {
+    background-color: white;
+    border: none;
+}
+
+.caja-tabla thead {
+    background-color: #302b49;
+    color: white;
+}
+
+.caja-tabla th {
+    background-color: #302b49;
+    color: white;
+}
+
+.caja-footer {
+    background-color: #302b49;
+    color: white;
+}
 
     </style>
 </head>
 
 <body>
 
-    <div class="container-fluid">
-        <div class="row">
+<div class="container-fluid">
 
-            <!-- MENU -->
-            <nav class="col-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-center gap-3 p-3">
+    <!-- MENÚ -->
+    <nav class="col-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-center gap-3 p-3">
 
-                <div class="menu-item d-flex flex-column align-items-center gap-2">
-                    <img class="icono" src="img/icono-estructura.png" alt="Icono estructura">
-                    <a class="btn btn-menu" href="./index.html">Estructura y Sintaxis</a>
-                </div>
+        <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img class="icono" src="img/icono-estructura.png" alt="Icono estructura">
+            <a class="btn btn-menu" href="./index.html">Estructura y Sintaxis</a>
+        </div>
 
-                <div class="menu-item d-flex flex-column align-items-center gap-2">
-                    <img class="icono" src="img/icono-especificidad.png" alt="Icono especificidad">
-                    <a class="btn btn-menu" href="./especificidad.html">Niveles de Especificidad</a>
-                </div>
+        <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img class="icono" src="img/icono-especificidad.png" alt="Icono especificidad">
+            <a class="btn btn-menu" href="./especificidad.html">Niveles de Especificidad</a>
+        </div>
 
-                <div class="menu-item d-flex flex-column align-items-center gap-2">
-                    <img class="icono" src="img/icono-pseudoclases.png" alt="Icono pseudoclases">
-                    <a class="btn btn-menu" href="./pseudo.html">Pseudo Clases y Pseudo Elementos</a>
-                </div>
+        <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img class="icono" src="img/icono-pseudoclases.png" alt="Icono pseudoclases">
+            <a class="btn btn-menu" href="./pseudo.html">Pseudo Clases y Pseudo Elementos</a>
+        </div>
 
-                <div class="menu-item d-flex flex-column align-items-center gap-2">
-                    <img class="icono" src="img/icono-boxmodel.png" alt="Icono box model">
-                    <a class="btn btn-menu" href="./boxmodel.html">Box Model</a>
-                </div>
+        <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img class="icono" src="img/icono-boxmodel.png" alt="Icono box model">
+            <a class="btn btn-menu" href="./boxmodel.html">Box Model</a>
+        </div>
 
-            </nav>
+    </nav>
 
-            <!-- BANNER -->
-            <header class="col-12 caja3 p-0">
-            </header>
 
-            <!-- DOS CAJAS PRINCIPALES -->
-            <aside class="col-12 col-md-12 col-lg-6 caja2 p-3">
-            </aside>
+    <!-- BANNER -->
+    <header class="row">
+        <div class="col-12 p-0">
+            <img src="img/banner-css.png" class="w-100 banner" alt="Banner CSS">
+        </div>
+    </header>
 
-            <aside class="col-12 col-md-12 col-lg-6 caja4 p-3">
-            </aside>
 
-            <!-- 18 CAJAS -->
-            <div class="row g-0">
+    <!-- INTRODUCCIÓN -->
+    <section class="row g-0">
 
-                <div class="col-6 col-md-4 col-lg-2 caja3 p-3"></div>
+        <div class="col-12 col-lg-8 caja-intro p-4">
+            <h1>¿Qué es la especificidad en CSS?</h1>
 
-                <div class="col-6 col-md-4 col-lg-2 caja4 p-3"></div>
+            <p>
+                La especificidad es el mecanismo que utiliza CSS para
+                determinar qué regla de estilo tiene prioridad cuando
+                varios selectores intentan modificar un mismo elemento HTML.
+            </p>
 
-                <div class="col-6 col-md-4 col-lg-2 caja6 p-3"></div>
+            <p>
+                Cada selector tiene un nivel de prioridad. Cuanto más
+                específico sea, mayor será su capacidad para determinar
+                los estilos que se aplicarán.
+            </p>
+        </div>
 
-                <div class="col-6 col-md-4 col-lg-2 caja8 p-3"></div>
+        <div class="col-12 col-lg-4 caja-intro2 p-4 text-center">
+            <h2>CSS</h2>
+            <h3>Prioridad de selectores</h3>
+            <p>
+                Aprende a identificar qué reglas tienen mayor importancia.
+            </p>
+        </div>
 
-                <div class="col-6 col-md-4 col-lg-2 caja7 p-3"></div>
+    </section>
 
-                <div class="col-6 col-md-4 col-lg-2 caja9 p-3"></div>
 
-                <div class="col-6 col-md-4 col-lg-2 caja4 p-3"></div>
+    <!-- TÍTULO -->
+    <section class="row p-4">
+        <div class="col-12 text-center">
+            <h2>Jerarquía de especificidad</h2>
+            <p>Conoce los principales niveles de prioridad en CSS.</p>
+        </div>
+    </section>
 
-                <div class="col-6 col-md-4 col-lg-2 caja8 p-3"></div>
 
-                <div class="col-6 col-md-4 col-lg-2 caja3 p-3"></div>
+    <!-- PRIMER NIVEL: DOS COLUMNAS -->
+    <section class="row g-3 p-3">
 
-                <div class="col-6 col-md-4 col-lg-2 caja2 p-3"></div>
+        <div class="col-12 col-md-6">
+            <div class="card caja-nivel1 h-100 p-3">
 
-                <div class="col-6 col-md-4 col-lg-2 caja6 p-3"></div>
+                <h2>01. Estilos en línea</h2>
 
-                <div class="col-6 col-md-4 col-lg-2 caja4 p-3"></div>
+                <p>
+                    Son estilos que se escriben directamente en la etiqueta
+                    HTML mediante el atributo style. Tienen una prioridad
+                    alta frente a las reglas normales de una hoja CSS.
+                </p>
 
-                <div class="col-6 col-md-4 col-lg-2 caja9 p-3"></div>
+                <h5>Ejemplo:</h5>
 
-                <div class="col-6 col-md-4 col-lg-2 caja7 p-3"></div>
-
-                <div class="col-6 col-md-4 col-lg-2 caja8 p-3"></div>
-
-                <div class="col-6 col-md-4 col-lg-2 caja4 p-3"></div>
-
-                <div class="col-6 col-md-4 col-lg-2 caja6 p-3"></div>
-
-                <div class="col-6 col-md-4 col-lg-2 caja3 p-3"></div>
+                <pre><code>&lt;p style="color: red;"&gt;
+  Texto de ejemplo
+&lt;/p&gt;</code></pre>
 
             </div>
-
         </div>
-    </div>
+
+
+        <div class="col-12 col-md-6">
+            <div class="card caja-nivel2 h-100 p-3">
+
+                <h2>02. Identificadores (ID)</h2>
+
+                <p>
+                    Permiten seleccionar un elemento HTML específico
+                    mediante el atributo id. En CSS se representan
+                    utilizando el símbolo numeral (#).
+                </p>
+
+                <h5>Ejemplo:</h5>
+
+                <pre><code>#titulo {
+  color: blue;
+  font-size: 25px;
+}</code></pre>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SEGUNDO NIVEL: TRES COLUMNAS -->
+    <section class="row g-3 p-3">
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card caja-nivel3 h-100 p-3">
+
+                <h2>03. Clases y atributos</h2>
+
+                <p>
+                    Identifican elementos mediante clases o características
+                    específicas. Se utilizan el punto (.) y los selectores
+                    de atributos.
+                </p>
+
+                <h5>Ejemplo:</h5>
+
+                <pre><code>.texto {
+  color: green;
+}
+
+input[type="text"] {
+  background: pink;
+}</code></pre>
+
+            </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card caja-nivel4 h-100 p-3">
+
+                <h2>04. Pseudoclases</h2>
+
+                <p>
+                    Permiten aplicar estilos dependiendo del estado de un
+                    elemento, como cuando el usuario pasa el cursor o
+                    selecciona un campo.
+                </p>
+
+                <h5>Ejemplo:</h5>
+
+                <pre><code>button:hover {
+  background: purple;
+}
+
+input:focus {
+  border: 2px solid blue;
+}</code></pre>
+
+            </div>
+        </div>
+
+
+        <div class="col-12 col-md-12 col-lg-4">
+            <div class="card caja-nivel5 h-100 p-3">
+
+                <h2>05. Elementos y pseudoelementos</h2>
+
+                <p>
+                    Los elementos seleccionan etiquetas HTML como p, h1
+                    o div. Los pseudoelementos modifican partes específicas
+                    de un elemento.
+                </p>
+
+                <h5>Ejemplo:</h5>
+
+                <pre><code>p {
+  color: black;
+}
+
+p::first-letter {
+  font-size: 30px;
+}</code></pre>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SELECTOR UNIVERSAL -->
+    <section class="row p-3">
+
+        <div class="col-12">
+            <div class="card caja-universal p-4">
+
+                <div class="row align-items-center">
+
+                    <div class="col-12 col-md-4 text-center">
+                    </div>
+
+                    <div class="col-12 col-md-8">
+                        <h2>06. Selector universal (*)</h2>
+
+                        <p>
+                            Se representa mediante un asterisco y permite
+                            seleccionar todos los elementos HTML de una
+                            página. No aporta valor a la especificidad.
+                        </p>
+
+                        <pre><code>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}</code></pre>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- RESUMEN -->
+    <section class="row g-3 p-3">
+
+        <div class="col-12 col-lg-5">
+            <div class="card caja-resumen p-4 h-100">
+
+                <h2>Resumen</h2>
+
+                <p>
+                    De mayor a menor prioridad en las reglas normales:
+                </p>
+
+                <ol>
+                    <li>Estilos en línea.</li>
+                    <li>Identificadores (ID).</li>
+                    <li>Clases, atributos y pseudoclases.</li>
+                    <li>Elementos y pseudoelementos.</li>
+                </ol>
+
+                <p>
+                    El selector universal y los combinadores no aportan
+                    especificidad.
+                </p>
+
+            </div>
+        </div>
+
+
+        <div class="col-12 col-lg-7">
+            <div class="card caja-tabla p-4 h-100">
+
+                <h2>Comparación de selectores</h2>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>Selector</th>
+                                <th>Ejemplo</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>En línea</td>
+                                <td>style=""</td>
+                                <td>1000</td>
+                            </tr>
+
+                            <tr>
+                                <td>ID</td>
+                                <td>#titulo</td>
+                                <td>100</td>
+                            </tr>
+
+                            <tr>
+                                <td>Clase</td>
+                                <td>.texto</td>
+                                <td>10</td>
+                            </tr>
+
+                            <tr>
+                                <td>Elemento</td>
+                                <td>p</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>Universal</td>
+                                <td>*</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+</div>
 
 </body>
 </html>
