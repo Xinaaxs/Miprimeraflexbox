@@ -1,0 +1,226 @@
+
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maquetación</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <style>
+
+        body {
+            background-color: #EAF3F2;
+            color: #183B4E;
+            font-family: Arial, sans-serif;
+        }
+
+        .caja1 {
+            min-height: 130px;
+            background-color: #183B4E;
+        }
+
+        .caja2 {
+            min-height: 300px;
+            background-color: #227C83;
+        }
+
+        .caja3 {
+            min-height: 300px;
+            background-color: #3AA6A0;
+        }
+
+        .caja4 {
+            min-height: 300px;
+            background-color: #A8D5BA;
+        }
+
+        .caja5 {
+            min-height: 300px;
+            background-color: #EAF3F2;
+        }
+
+        .caja6 {
+            min-height: 300px;
+            background-color: #F4BFA1;
+        }
+
+        .caja7 {
+            min-height: 300px;
+            background-color: #F08A70;
+        }
+
+        .caja8 {
+            min-height: 300px;
+            background-color: #75B9BE;
+        }
+
+        .caja9 {
+            min-height: 300px;
+            background-color: #D4E9E2;
+        }
+
+        .icono {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .menu-item {
+            flex: 0 1 210px;
+            min-width: 0;
+        }
+
+        .imagen-codigo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-menu {
+            color: white;
+            border: 2px solid #A8D5BA;
+            border-radius: 0;
+            padding: 10px 15px;
+            background-color: transparent;
+            transition: 0.3s;
+        }
+
+        .btn-menu:hover {
+            background-color: #A8D5BA;
+            color: #183B4E;
+        }
+
+        @media (max-width: 575.98px) {
+
+            .caja1 {
+                gap: 12px !important;
+            }
+
+            .menu-item {
+                flex: 1 1 calc(50% - 12px);
+            }
+
+            .btn-menu {
+                width: 100%;
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 1024px) {
+
+            .menu-item {
+                flex: 1 1 calc(50% - 16px);
+                max-width: 260px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            .imagen-codigo {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- MENU -->
+            <nav class="col-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-center gap-3 p-3">
+
+                <div class="menu-item d-flex flex-column align-items-center gap-2">
+                    <img class="icono" src="img/icono-estructura.png" alt="Icono estructura">
+                    <a class="btn btn-menu" href="./index.html">Estructura y Sintaxis</a>
+                </div>
+
+                <div class="menu-item d-flex flex-column align-items-center gap-2">
+                    <img class="icono" src="img/icono-especificidad.png" alt="Icono especificidad">
+                    <a class="btn btn-menu" href="./especificidad.html">Niveles de Especificidad</a>
+                </div>
+
+                <div class="menu-item d-flex flex-column align-items-center gap-2">
+                    <img class="icono" src="img/icono-pseudoclases.png" alt="Icono pseudoclases">
+                    <a class="btn btn-menu" href="./pseudo.html">Pseudo Clases y Pseudo Elementos</a>
+                </div>
+
+                <div class="menu-item d-flex flex-column align-items-center gap-2">
+                    <img class="icono" src="img/icono-boxmodel.png" alt="Icono box model">
+                    <a class="btn btn-menu" href="./boxmodel.html">Box Model</a>
+                </div>
+
+            </nav>
+
+            <!-- BANNER -->
+            <header class="col-12 caja2 p-0">
+            </header>
+
+            <!-- DOS CAJAS PRINCIPALES -->
+            <aside class="col-12 col-md-12 col-lg-6 caja3">
+            </aside>
+
+            <aside class="col-12 col-md-12 col-lg-6 caja5">
+            </aside>
+
+            <!-- 18 CAJAS INFERIORES -->
+            <div class="row g-0">
+
+                <div class="col-6 col-md-4 col-lg-2 caja2"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja3"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja4"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja5"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja6"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja7"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja7"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja6"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja5"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja4"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja3"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja2"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja2"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja3"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja4"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja5"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja6"></div>
+
+                <div class="col-6 col-md-4 col-lg-2 caja7"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
